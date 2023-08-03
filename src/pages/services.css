@@ -4,7 +4,7 @@
     width: 100vw;
     justify-content: center;
     align-items: center;
-    padding: 5rem 6rem 100vh;
+    padding: 5rem 6rem 60vh;
 }
 
 .accordion {
@@ -28,7 +28,7 @@
 }
 
 .content {
-    color: #8b7f75;
+    color: rgb(133, 133, 133);
     max-height: 0;
     overflow: hidden;
     transition: all 0.5s cubic-bezier(0, 1, 0, 1);
@@ -42,7 +42,7 @@
 
 serv {
     font-family: Georgia, serif;
-    color: blue;
+    color: rgb(52 52 178);
     font-size: xx-large;
 }
 

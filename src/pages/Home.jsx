@@ -55,15 +55,21 @@ function Home() {
                 </p>
             </div>
 
-            {/* Advertising users to create an account and sign up for newsletter*/}
+            {/* Misson Statement */}
+            <div className='misson'>
+                <h1 className='bluetext'>What we do</h1>
+                <p className='textbox'>At Great River Solutions, we are a forward-thinking digital agency dedicated to transforming businesses with cutting-edge
+                 website solutions. Through in-depth market research, innovative design, and a focus on user experience, 
+                 we elevate your online presence, helping your company thrive in the competitive landscape.
+                </p>
+            </div>
+
+            {/* Advertising users to sign up for newsletter*/}
             <div className='signblock'>
                 <h2signup>Unleash the Potential of your Business</h2signup>
-                <p className='psignup'>Sign Up to join our newsletter and to see exclusive promotions on our services</p>
             </div>
             <div className='signbox'>
-                <Link to="/register" className='button2'>
-                    Sign Up
-                </Link>
+                <a className="button2" href="mailto:greatriversolutions@gmail.com" target="_blank" rel="noopener noreferrer">Contact Us</a>
             </div>
             <Footer />
         </div> 
