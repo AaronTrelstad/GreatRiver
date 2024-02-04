@@ -2,10 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Header from '../headers/header'
 import './pages.css'
-import Bala from '../assets/bala.jpeg'
-import Aaron from '../assets/Aaron.jpeg'
 import Footer from '../footer/footer'
 import { TypeAnimation } from 'react-type-animation'
+import { FaChevronCircleDown } from "react-icons/fa";
 import River from '../assets/qc.jpeg'
 
 function Home() {

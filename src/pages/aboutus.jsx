@@ -16,14 +16,14 @@ const About = () => {
             <div className='about'>
                 <div className='imgblock'>
                     <img src={Aaron} className='resized'/>
-                    <pabout className='textbox'>Aaron Trelstad currently attends Iowa State University and is pursuing degrees in Computer Science and Mathematics.
-                    He has previously worked in User Experience (UX) and has experience in Full Stack Web develpoment.
+                    <pabout className='textbox'>Aaron Trelstad currently attends Iowa State University and is double majoring in Computer Science
+                    and Mathematics along with a minor in Statistics. He has experience working in User Experience (UX) Design and Software Engineering.
                     </pabout>
                 </div>
                 <div className='imgblock'>
                     <img src={Bala} className='resized'/>
-                    <pabout className='textbox'>Abhyudaya Shukla currently attends the University of Wisconsin-Madison and is pursuing degrees in Computer Science and Finance.
-                    He has experience in Web develpoment and Full Stack App develpoment.
+                    <pabout className='textbox'>Abhyudaya Shukla currently attends the University of Wisconsin-Madison and is pursuing degrees in Computer Science and Data Science.
+                    He has experience in Full Stack App develpoment.
                     </pabout>
                 </div>
             </div>

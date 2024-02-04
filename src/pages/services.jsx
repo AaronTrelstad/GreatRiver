@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import Header from "../headers/header"
 import './services.css'
 import Footer from '../footer/footer'
@@ -21,6 +22,9 @@ const Services = () => {
         <Header />
         <div className='topspace'>
             <h4>Services</h4> 
+        </div>
+        <div className="serviceExamples">
+            <Link to="https://motisfood.com">Click here to check out our recent work!</Link>
         </div>
         <div className='wrapper'>
             <div className='accordion'>

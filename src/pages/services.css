@@ -53,3 +53,10 @@ serv {
     padding: 30px 10px;
     border-radius: 10px;
 }
+
+.serviceExamples {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
