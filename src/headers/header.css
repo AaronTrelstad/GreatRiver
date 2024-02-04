@@ -43,7 +43,7 @@
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 150px;
+    width: 10rem;
 }
 
 .button:hover {
