@@ -23,7 +23,7 @@ const About = () => {
                 <div className='imgblock'>
                     <img src={Bala} className='resized'/>
                     <pabout className='textbox'>Abhyudaya Shukla currently attends the University of Wisconsin-Madison and is pursuing degrees in Computer Science and Data Science.
-                    He has experience in Full Stack App develpoment.
+                    He has experience in Full Stack App development.
                     </pabout>
                 </div>
             </div>
