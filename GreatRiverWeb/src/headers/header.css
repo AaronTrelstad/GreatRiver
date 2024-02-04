@@ -59,4 +59,13 @@ header.transparent {
     height: 6rem;
     object-fit: cover;
 }
+
+@media only screen and (max-width: 767px) {
+    .button-container {
+        display: grid;
+        justify-content: left;
+
+
+    }
+}
   

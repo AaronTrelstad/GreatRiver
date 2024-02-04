@@ -28,7 +28,7 @@ const Header = () => {
       </div>
       
       {/* This are the buttons displayed on the top of the page*/}
-      <div className="button_container">
+      <div className="button-container">
         <Link to="/home" className='button'>
           Home
         </Link>

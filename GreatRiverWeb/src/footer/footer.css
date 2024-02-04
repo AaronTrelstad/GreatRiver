@@ -38,3 +38,10 @@
   color: white;
   margin-right: 10px;
 }
+
+@media only screen and (max-width: 767px) {
+    .footerblock {
+      padding:0rem;
+      margin:0.3rem;
+    }
+}

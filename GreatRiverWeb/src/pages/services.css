@@ -60,3 +60,9 @@ serv {
     align-items: center;
     margin: auto;
 }
+
+@media only screen and (max-width: 767px) {
+    .topspace {
+        margin-top: 30%;
+    }
+}
