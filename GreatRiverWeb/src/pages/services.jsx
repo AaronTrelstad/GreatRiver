@@ -46,6 +46,7 @@ const Services = () => {
                 ))}
             </div>
         </div>
+        <div className='bottomspace'/>
         <Footer />
         </div>
     )

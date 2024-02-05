@@ -61,8 +61,20 @@ serv {
     margin: auto;
 }
 
+.bottomspace {
+    color:white;
+}
+
 @media only screen and (max-width: 767px) {
     .topspace {
         margin-top: 30%;
+    }
+
+    .bottomspace {
+        margin-top: 12%;
+        color: white;
+        text-align: center;
+        padding: 30px 10px;
+        border-radius: 10px;
     }
 }
