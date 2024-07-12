@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'
-import './header.css';
-import Logo from '../assets/3.png'
+import { Link } from 'react-router-dom';
+import Logo from '../assets/3.png';
 
 const Header = () => {
-  {/* This makes it so that when the user is at the top of the page the header is transparent */}
   const [isTransparent, setIsTransparent] = useState(true);
 
   useEffect(() => {
-    {/* Then when user scrolls down the page the header returns to its normal color (white) */}
     const handleScroll = () => {
       setIsTransparent(window.scrollY === 0);
     };
@@ -20,27 +17,32 @@ const Header = () => {
   }, []);
 
   return (
-    <>
-    {/* The className depends on the position of the page*/}
-    <header className={`header ${isTransparent ? 'transparent' : ''}`}>
+    <header className={`fixed top-0 left-0 right-0 z-10 flex items-center justify-between px-4 py-3 transition-all duration-300 ${isTransparent ? 'bg-transparent text-white' : 'bg-white shadow-md text-gray-800'}`}>
       <div className="squarelogo">
-        <img src={Logo} className='squarelogo'></img>
+        <img src={Logo} alt="Logo" className='h-16' />
       </div>
       
-      {/* This are the buttons displayed on the top of the page*/}
-      <div className="button-container">
-        <Link to="/home" className='button'>
+      <nav className="flex space-x-4">
+        <Link
+          to="/"
+          className={`px-4 py-3 rounded-lg text-lg ${isTransparent ? 'text-blue-600 border-blue-600 border-2 bg-white hover:bg-blue-600 hover:text-white' : 'text-blue-600 bg-white border-blue-600 border-2 hover:bg-blue-600 hover:text-white'}`}
+        >
           Home
         </Link>
-        <Link to="/services" className='button'>
+        <Link
+          to="/services"
+          className={`px-4 py-3 rounded-lg text-lg ${isTransparent ? 'text-blue-600 border-blue-600 border-2 bg-white hover:bg-blue-600 hover:text-white' : 'text-blue-600 bg-white border-blue-600 border-2 hover:bg-blue-600 hover:text-white'}`}
+        >
           Services
         </Link>
-        <Link to="/about" className='button'>
+        <Link
+          to="/aboutus"
+          className={`px-4 py-3 rounded-lg text-lg ${isTransparent ? 'text-blue-600 border-blue-600 border-2 bg-white hover:bg-blue-600 hover:text-white' : 'text-blue-600 bg-white border-blue-600 border-2 hover:bg-blue-600 hover:text-white'}`}
+        >
           About Us
         </Link>
-      </div>
+      </nav>
     </header>
-    </>
   );
 };
 

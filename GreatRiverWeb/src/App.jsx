@@ -1,23 +1,41 @@
-import { useState } from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import Home from './pages/Home'
 import Services from './pages/services'
 import About from './pages/aboutus'
-import {HashRouter, Routes, Route} from 'react-router-dom'
+import Header from './headers/header'
+import Footer from './footer/footer'
+import {createBrowserRouter, RouterProvider, Outlet} from 'react-router-dom'
+import './index.css'
 
+const router = createBrowserRouter([{
+  path:"/",
+  element: (
+    <>
+      <Header />
+      <div className="min-h-screen">
+        <Outlet />
+      </div>
+      <Footer />
+    </>
+  ),
+  children: [
+    {
+      path: '/',
+      element: <Home />
+    },
+    {
+      path: '/services',
+      element: <Services />
+    },
+    {
+      path: '/aboutus',
+      element: <About />
+    }
+  ]
+}])
 
 function App() {
-
   return (
-    <HashRouter>
-      <Routes>
-        {/* This makes it so the landing page is the home page*/}
-        <Route index element={<Home />} />
-        <Route path='/home' element={<Home />}></Route>
-        <Route path='/services' element={<Services />}></Route>
-        <Route path='/about' element={<About />}></Route>
-      </Routes>
-    </HashRouter>
+    <RouterProvider router={router} />
   )
 }
 

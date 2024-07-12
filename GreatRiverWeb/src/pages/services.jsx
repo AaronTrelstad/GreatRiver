@@ -1,56 +1,30 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import Header from "../headers/header"
-import './services.css'
-import Footer from '../footer/footer'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Header from "../headers/header";
+import Footer from '../footer/footer';
 
 const Services = () => {
-    {/* Records which box is clicked on */}
-    const [selected, setSelected] = useState(null)
-
-    const toggle = (i) => {
-        {/* This makes it so that if you click on the open box it will close */} 
-        if (selected === i) {
-            return setSelected(null)
-        }
-        {/* This makes it so the clicked on box opens */}
-        setSelected(i)
-    }
-
     return (
-        <div>
-        <Header />
-        <div className='topspace'>
-            <h4>Services</h4> 
-        </div>
-        <div className="serviceExamples">
-            <Link to="https://motisfood.com">Click here to check out our recent work!</Link>
-        </div>
-        <div className='wrapper'>
-            <div className='accordion'>
-
-                {/* This iterates through the data (shown below) and creates a tab for all of them */}
-                {data.map((item, i) => (
-                    <div className='item'>
-                        <div className='title' onClick={() => toggle(i)}>
-                            <serv>{item.service}</serv>
-                            {/* This makes it so that when a tab is clicked on it displays a '-' and when unclicked '+' */}
-                            <span>{selected === i ? '-' : '+'}</span>
-                        </div>
-                        
-                        {/* This makes it so that intially the explaination of the service
-                            is hidden untill the user clicks on the tab */}
-                        <div className={selected === i ? 'content show' : 'content'}>{item.explain}</div>
-
+        <div className="flex flex-col min-h-screen">
+            <div className='mt-32'>
+                <h4 className="text-4xl font-light text-center text-gray-800 mb-4">Services</h4>
+            </div>
+            <div className="serviceExamples text-center mb-10">
+                <Link to="https://motisfood.com" className="text-blue-600 underline">
+                    Click here to check out our recent work!
+                </Link>
+            </div>
+            <div className='wrapper flex flex-col items-center'>
+                {data.map((item, index) => (
+                    <div className='bg-white rounded-lg shadow-md p-6 mb-4 max-w-4xl w-full'>
+                        <h3 className='bg-gray-200 py-2 px-4 rounded-lg mb-2 text-xl font-semibold text-gray-800'>{item.service}</h3>
+                        <p className='text-gray-700'>{item.explain}</p>
                     </div>
                 ))}
             </div>
         </div>
-        <div className='bottomspace'/>
-        <Footer />
-        </div>
-    )
-}
+    );
+};
 
 const data = [
     {
@@ -65,6 +39,6 @@ const data = [
         service: 'Front End Website Creation',
         explain: 'Is your company missing an online presence? Well, this presents a significant opportunity for growth. At Great River Solutions, we conduct thorough competitor research to develop a website that sets your company apart from the rest. Our team will craft a unique online platform that not only showcases your brand\'s identity but also captivates your target audience. With a focus on user experience and modern design, we will ensure that your website becomes a powerful tool for attracting and engaging potential customers, ultimately driving your business to new heights. Embrace this opportunity for growth with our tailored website solutions.',
     },
-]
+];
 
-export default Services
+export default Services;
